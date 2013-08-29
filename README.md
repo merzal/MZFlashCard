@@ -1,0 +1,4 @@
+MZFlashCard
+===========
+
+A FlashCard application
