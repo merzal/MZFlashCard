@@ -94,6 +94,8 @@
 		05CE702014163FCE00CF9F09 /* MZRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CE701E14163FCD00CF9F09 /* MZRootViewController.xib */; };
 		05CE70241416416F00CF9F09 /* MZFlashCardPackChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CE70231416416F00CF9F09 /* MZFlashCardPackChooser.m */; };
 		1303971617D3B2B10013839C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1303971517D3B2B10013839C /* Default-568h@2x.png */; };
+		1303971B17D3B7C30013839C /* MZFlashCardAppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 1303971A17D3B7C30013839C /* MZFlashCardAppDelegate_Shared.m */; };
+		1303971E17D3B7E20013839C /* MZFlashCardAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 1303971D17D3B7E20013839C /* MZFlashCardAppDelegate_iPad.m */; };
 		136C2D2416DD3E49001263FA /* gray_background_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D2216DD3E48001263FA /* gray_background_image@2x.png */; };
 		136C2D2516DD3E49001263FA /* gray_background_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D2216DD3E48001263FA /* gray_background_image@2x.png */; };
 		136C2D2616DD3E49001263FA /* gray_background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D2316DD3E48001263FA /* gray_background_image.png */; };
@@ -108,7 +110,7 @@
 		136C2D3F16DD40F1001263FA /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D3716DD40F1001263FA /* blueButtonHighlight@2x.png */; };
 		136C2D4916DD5720001263FA /* gray_background_image-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D4816DD5720001263FA /* gray_background_image-568h@2x.png */; };
 		136C2D4A16DD5720001263FA /* gray_background_image-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D4816DD5720001263FA /* gray_background_image-568h@2x.png */; };
-		136C2D7A16DD57F6001263FA /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D7816DD57F6001263FA /* MainWindow-iPad.xib */; };
+		136C2D7A16DD57F6001263FA /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D7816DD57F6001263FA /* MainWindow_iPad.xib */; };
 		F25C0D7A142DEA8900FB8375 /* UIColor+MZFlashCardUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F25C0D79142DEA8900FB8375 /* UIColor+MZFlashCardUtils.m */; };
 		F28074A31401A93A000010F6 /* MZFlashCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F28074A21401A93A000010F6 /* MZFlashCardItem.m */; };
 		F28434D314005E47008512C9 /* exampleDataBase.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28434D214005E47008512C9 /* exampleDataBase.plist */; };
@@ -117,8 +119,8 @@
 		F2B0792813FEEC7600FEE33D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B0792713FEEC7600FEE33D /* CoreGraphics.framework */; };
 		F2B0792E13FEEC7600FEE33D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2B0792C13FEEC7600FEE33D /* InfoPlist.strings */; };
 		F2B0793013FEEC7600FEE33D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B0792F13FEEC7600FEE33D /* main.m */; };
-		F2B0793413FEEC7600FEE33D /* MZFlashCardAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B0793313FEEC7600FEE33D /* MZFlashCardAppDelegate.m */; };
-		F2B0793713FEEC7600FEE33D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B0793513FEEC7600FEE33D /* MainWindow.xib */; };
+		F2B0793413FEEC7600FEE33D /* MZFlashCardAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B0793313FEEC7600FEE33D /* MZFlashCardAppDelegate_iPhone.m */; };
+		F2B0793713FEEC7600FEE33D /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B0793513FEEC7600FEE33D /* MainWindow_iPhone.xib */; };
 		F2B0793A13FEEC7600FEE33D /* MZFlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B0793913FEEC7600FEE33D /* MZFlashCardViewController.m */; };
 		F2B0793D13FEEC7600FEE33D /* MZFlashCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B0793B13FEEC7600FEE33D /* MZFlashCardViewController.xib */; };
 		F2B0794513FEEC7600FEE33D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B0794413FEEC7600FEE33D /* SenTestingKit.framework */; };
@@ -317,6 +319,10 @@
 		05CE70221416416E00CF9F09 /* MZFlashCardPackChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFlashCardPackChooser.h; sourceTree = "<group>"; };
 		05CE70231416416F00CF9F09 /* MZFlashCardPackChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardPackChooser.m; sourceTree = "<group>"; };
 		1303971517D3B2B10013839C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1303971917D3B7C30013839C /* MZFlashCardAppDelegate_Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFlashCardAppDelegate_Shared.h; sourceTree = "<group>"; };
+		1303971A17D3B7C30013839C /* MZFlashCardAppDelegate_Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardAppDelegate_Shared.m; sourceTree = "<group>"; };
+		1303971C17D3B7E20013839C /* MZFlashCardAppDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFlashCardAppDelegate_iPad.h; sourceTree = "<group>"; };
+		1303971D17D3B7E20013839C /* MZFlashCardAppDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardAppDelegate_iPad.m; sourceTree = "<group>"; };
 		136C2D2216DD3E48001263FA /* gray_background_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_background_image@2x.png"; sourceTree = "<group>"; };
 		136C2D2316DD3E48001263FA /* gray_background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_background_image.png; sourceTree = "<group>"; };
 		136C2D3416DD40F1001263FA /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
@@ -324,7 +330,7 @@
 		136C2D3616DD40F1001263FA /* blueButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButtonHighlight.png; sourceTree = "<group>"; };
 		136C2D3716DD40F1001263FA /* blueButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		136C2D4816DD5720001263FA /* gray_background_image-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_background_image-568h@2x.png"; sourceTree = "<group>"; };
-		136C2D7916DD57F6001263FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		136C2D7916DD57F6001263FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
 		F25C0D78142DEA8900FB8375 /* UIColor+MZFlashCardUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MZFlashCardUtils.h"; sourceTree = "<group>"; };
 		F25C0D79142DEA8900FB8375 /* UIColor+MZFlashCardUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MZFlashCardUtils.m"; sourceTree = "<group>"; };
 		F280749A1401295E000010F6 /* convert_csv2plist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = convert_csv2plist.sh; sourceTree = "<group>"; };
@@ -339,9 +345,9 @@
 		F2B0792D13FEEC7600FEE33D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2B0792F13FEEC7600FEE33D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2B0793113FEEC7600FEE33D /* MZFlashCard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MZFlashCard-Prefix.pch"; sourceTree = "<group>"; };
-		F2B0793213FEEC7600FEE33D /* MZFlashCardAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardAppDelegate.h; sourceTree = "<group>"; };
-		F2B0793313FEEC7600FEE33D /* MZFlashCardAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardAppDelegate.m; sourceTree = "<group>"; };
-		F2B0793613FEEC7600FEE33D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F2B0793213FEEC7600FEE33D /* MZFlashCardAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		F2B0793313FEEC7600FEE33D /* MZFlashCardAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		F2B0793613FEEC7600FEE33D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
 		F2B0793813FEEC7600FEE33D /* MZFlashCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardViewController.h; sourceTree = "<group>"; };
 		F2B0793913FEEC7600FEE33D /* MZFlashCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardViewController.m; sourceTree = "<group>"; };
 		F2B0793C13FEEC7600FEE33D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZFlashCardViewController.xib; sourceTree = "<group>"; };
@@ -610,10 +616,44 @@
 			name = "SML Support";
 			sourceTree = "<group>";
 		};
+		1303971717D3B6F90013839C /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F2B0793213FEEC7600FEE33D /* MZFlashCardAppDelegate_iPhone.h */,
+				F2B0793313FEEC7600FEE33D /* MZFlashCardAppDelegate_iPhone.m */,
+				F2B0793513FEEC7600FEE33D /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		1303971817D3B76D0013839C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1303971917D3B7C30013839C /* MZFlashCardAppDelegate_Shared.h */,
+				1303971A17D3B7C30013839C /* MZFlashCardAppDelegate_Shared.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		1303971F17D3B8320013839C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F25C0D78142DEA8900FB8375 /* UIColor+MZFlashCardUtils.h */,
+				F25C0D79142DEA8900FB8375 /* UIColor+MZFlashCardUtils.m */,
+				05B58D6F140F7E0F00D8AD59 /* NSString+MZFlashCardUtils.h */,
+				05B58D70140F7E0F00D8AD59 /* NSString+MZFlashCardUtils.m */,
+				05B58D73140F7EF500D8AD59 /* NSMutableArray+MZFlashCardUtils.h */,
+				05B58D74140F7EF500D8AD59 /* NSMutableArray+MZFlashCardUtils.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		136C2D7716DD57F5001263FA /* iPad */ = {
 			isa = PBXGroup;
 			children = (
-				136C2D7816DD57F6001263FA /* MainWindow-iPad.xib */,
+				1303971C17D3B7E20013839C /* MZFlashCardAppDelegate_iPad.h */,
+				1303971D17D3B7E20013839C /* MZFlashCardAppDelegate_iPad.m */,
+				136C2D7816DD57F6001263FA /* MainWindow_iPad.xib */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -651,10 +691,9 @@
 		F2B0792913FEEC7600FEE33D /* MZFlashCard */ = {
 			isa = PBXGroup;
 			children = (
+				1303971817D3B76D0013839C /* Shared */,
 				136C2D7716DD57F5001263FA /* iPad */,
-				F2B0793213FEEC7600FEE33D /* MZFlashCardAppDelegate.h */,
-				F2B0793313FEEC7600FEE33D /* MZFlashCardAppDelegate.m */,
-				F2B0793513FEEC7600FEE33D /* MainWindow.xib */,
+				1303971717D3B6F90013839C /* iPhone */,
 				05CE701C14163FCC00CF9F09 /* MZRootViewController.h */,
 				05CE701D14163FCD00CF9F09 /* MZRootViewController.m */,
 				05CE701E14163FCD00CF9F09 /* MZRootViewController.xib */,
@@ -668,12 +707,7 @@
 				F28074A11401A93A000010F6 /* MZFlashCardItem.h */,
 				F28074A21401A93A000010F6 /* MZFlashCardItem.m */,
 				0577EE291417615900B43E0A /* Google Spreadsheet */,
-				F25C0D78142DEA8900FB8375 /* UIColor+MZFlashCardUtils.h */,
-				F25C0D79142DEA8900FB8375 /* UIColor+MZFlashCardUtils.m */,
-				05B58D6F140F7E0F00D8AD59 /* NSString+MZFlashCardUtils.h */,
-				05B58D70140F7E0F00D8AD59 /* NSString+MZFlashCardUtils.m */,
-				05B58D73140F7EF500D8AD59 /* NSMutableArray+MZFlashCardUtils.h */,
-				05B58D74140F7EF500D8AD59 /* NSMutableArray+MZFlashCardUtils.m */,
+				1303971F17D3B8320013839C /* Categories */,
 				F2B0792A13FEEC7600FEE33D /* Supporting Files */,
 			);
 			path = MZFlashCard;
@@ -794,7 +828,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B0792E13FEEC7600FEE33D /* InfoPlist.strings in Resources */,
-				F2B0793713FEEC7600FEE33D /* MainWindow.xib in Resources */,
+				F2B0793713FEEC7600FEE33D /* MainWindow_iPhone.xib in Resources */,
 				F2B0793D13FEEC7600FEE33D /* MZFlashCardViewController.xib in Resources */,
 				F28434D314005E47008512C9 /* exampleDataBase.plist in Resources */,
 				05CE702014163FCE00CF9F09 /* MZRootViewController.xib in Resources */,
@@ -808,7 +842,7 @@
 				136C2D3C16DD40F1001263FA /* blueButtonHighlight.png in Resources */,
 				136C2D3E16DD40F1001263FA /* blueButtonHighlight@2x.png in Resources */,
 				136C2D4916DD5720001263FA /* gray_background_image-568h@2x.png in Resources */,
-				136C2D7A16DD57F6001263FA /* MainWindow-iPad.xib in Resources */,
+				136C2D7A16DD57F6001263FA /* MainWindow_iPad.xib in Resources */,
 				1303971617D3B2B10013839C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -866,7 +900,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B0793013FEEC7600FEE33D /* main.m in Sources */,
-				F2B0793413FEEC7600FEE33D /* MZFlashCardAppDelegate.m in Sources */,
+				F2B0793413FEEC7600FEE33D /* MZFlashCardAppDelegate_iPhone.m in Sources */,
 				F2B0793A13FEEC7600FEE33D /* MZFlashCardViewController.m in Sources */,
 				F28074A31401A93A000010F6 /* MZFlashCardItem.m in Sources */,
 				05B58D71140F7E0F00D8AD59 /* NSString+MZFlashCardUtils.m in Sources */,
@@ -952,6 +986,8 @@
 				05A770621423809900C548DD /* GDataXMLNode.m in Sources */,
 				05A3A6D1142CCF3C0078E85F /* MZSettingsViewController.m in Sources */,
 				F25C0D7A142DEA8900FB8375 /* UIColor+MZFlashCardUtils.m in Sources */,
+				1303971B17D3B7C30013839C /* MZFlashCardAppDelegate_Shared.m in Sources */,
+				1303971E17D3B7E20013839C /* MZFlashCardAppDelegate_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,12 +1010,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		136C2D7816DD57F6001263FA /* MainWindow-iPad.xib */ = {
+		136C2D7816DD57F6001263FA /* MainWindow_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				136C2D7916DD57F6001263FA /* en */,
 			);
-			name = "MainWindow-iPad.xib";
+			name = MainWindow_iPad.xib;
 			sourceTree = "<group>";
 		};
 		F2B0792C13FEEC7600FEE33D /* InfoPlist.strings */ = {
@@ -990,12 +1026,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F2B0793513FEEC7600FEE33D /* MainWindow.xib */ = {
+		F2B0793513FEEC7600FEE33D /* MainWindow_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F2B0793613FEEC7600FEE33D /* en */,
 			);
-			name = MainWindow.xib;
+			name = MainWindow_iPhone.xib;
 			sourceTree = "<group>";
 		};
 		F2B0793B13FEEC7600FEE33D /* MZFlashCardViewController.xib */ = {

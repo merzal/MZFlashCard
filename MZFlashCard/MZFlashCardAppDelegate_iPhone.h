@@ -6,13 +6,12 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-@class MZFlashCardViewController;
+#import "MZFlashCardAppDelegate_Shared.h"
 
-@interface MZFlashCardAppDelegate : NSObject <UIApplicationDelegate>
+
+@interface MZFlashCardAppDelegate_iPhone : MZFlashCardAppDelegate_Shared
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
-//@property (nonatomic, retain) IBOutlet MZFlashCardViewController *viewController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 @end

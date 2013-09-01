@@ -1,30 +1,15 @@
 //
-//  MZFlashCardAppDelegate.m
+//  MZFlashCardAppDelegate_Shared.m
 //  MZFlashCard
 //
-//  Created by Mahmood1 on 8/19/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Zalan Mergl on 9/1/13.
+//
 //
 
-#import "MZFlashCardAppDelegate.h"
-#import "MZFlashCardViewController.h"
+#import "MZFlashCardAppDelegate_Shared.h"
 
-@implementation MZFlashCardAppDelegate
 
-@synthesize window = _window;
-//@synthesize viewController = _viewController;
-@synthesize navigationController=_navigationController;
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-     
-    //self.window.rootViewController = self.viewController;
-    self.window.rootViewController = self.navigationController;
-    [self.window makeKeyAndVisible];
-    
-    return YES;
-}
+@implementation MZFlashCardAppDelegate_Shared
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -37,7 +22,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
 }
@@ -63,14 +48,6 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
-}
-
-- (void)dealloc
-{
-    [_window release];
-//    [_viewController release];
-    [_navigationController release];
-    [super dealloc];
 }
 
 @end
