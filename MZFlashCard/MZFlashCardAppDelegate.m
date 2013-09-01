@@ -8,7 +8,6 @@
 
 #import "MZFlashCardAppDelegate.h"
 #import "MZFlashCardViewController.h"
-#import "iSpeechSDK.h"
 
 @implementation MZFlashCardAppDelegate
 
@@ -23,8 +22,6 @@
     //self.window.rootViewController = self.viewController;
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
-    
-    [[iSpeechSDK sharedSDK] setAPIKey:@"developerdemokeydeveloperdemokey"];
     
     return YES;
 }

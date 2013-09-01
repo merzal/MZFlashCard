@@ -6,8 +6,6 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 /*enum {
     MZFlashCardIndexChallenge = 0,
     MZFlashCardIndexSolution
@@ -42,6 +40,5 @@ typedef NSUInteger MZFlashCardIndex;
 
 - (IBAction)okButtonTouched:(id)sender;
 - (IBAction)dontOkButtonTouched:(id)sender;
-- (IBAction)loudspeakerButtonTouched:(id)sender;
 
 @end

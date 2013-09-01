@@ -93,15 +93,7 @@
 		05CE701F14163FCE00CF9F09 /* MZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CE701D14163FCD00CF9F09 /* MZRootViewController.m */; };
 		05CE702014163FCE00CF9F09 /* MZRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CE701E14163FCD00CF9F09 /* MZRootViewController.xib */; };
 		05CE70241416416F00CF9F09 /* MZFlashCardPackChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CE70231416416F00CF9F09 /* MZFlashCardPackChooser.m */; };
-		13177C1D168263170059D9CF /* loudspeaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 13177C1B168263170059D9CF /* loudspeaker.png */; };
-		13177C1E168263170059D9CF /* loudspeaker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13177C1C168263170059D9CF /* loudspeaker@2x.png */; };
-		13177C25168265070059D9CF /* libiSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13177C24168265070059D9CF /* libiSpeechSDK.a */; };
-		13177C2E168265900059D9CF /* iSpeechSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 13177C2D168265900059D9CF /* iSpeechSDK.bundle */; };
-		13177C30168265AD0059D9CF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13177C2F168265AD0059D9CF /* AudioToolbox.framework */; };
-		13177C32168265B80059D9CF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13177C31168265B80059D9CF /* SystemConfiguration.framework */; };
-		13177C34168265C40059D9CF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13177C33168265C40059D9CF /* Security.framework */; };
-		13177C36168265CB0059D9CF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13177C35168265CB0059D9CF /* CFNetwork.framework */; };
-		13177C39168267F30059D9CF /* ISpeechSDK+Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 13177C38168267F30059D9CF /* ISpeechSDK+Compatibility.m */; };
+		1303971617D3B2B10013839C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1303971517D3B2B10013839C /* Default-568h@2x.png */; };
 		136C2D2416DD3E49001263FA /* gray_background_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D2216DD3E48001263FA /* gray_background_image@2x.png */; };
 		136C2D2516DD3E49001263FA /* gray_background_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D2216DD3E48001263FA /* gray_background_image@2x.png */; };
 		136C2D2616DD3E49001263FA /* gray_background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D2316DD3E48001263FA /* gray_background_image.png */; };
@@ -114,7 +106,6 @@
 		136C2D3D16DD40F1001263FA /* blueButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D3616DD40F1001263FA /* blueButtonHighlight.png */; };
 		136C2D3E16DD40F1001263FA /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D3716DD40F1001263FA /* blueButtonHighlight@2x.png */; };
 		136C2D3F16DD40F1001263FA /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D3716DD40F1001263FA /* blueButtonHighlight@2x.png */; };
-		136C2D4716DD4FA5001263FA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D4616DD4FA4001263FA /* Default-568h@2x.png */; };
 		136C2D4916DD5720001263FA /* gray_background_image-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D4816DD5720001263FA /* gray_background_image-568h@2x.png */; };
 		136C2D4A16DD5720001263FA /* gray_background_image-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D4816DD5720001263FA /* gray_background_image-568h@2x.png */; };
 		136C2D7A16DD57F6001263FA /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 136C2D7816DD57F6001263FA /* MainWindow-iPad.xib */; };
@@ -325,29 +316,13 @@
 		05CE701E14163FCD00CF9F09 /* MZRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZRootViewController.xib; sourceTree = "<group>"; };
 		05CE70221416416E00CF9F09 /* MZFlashCardPackChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFlashCardPackChooser.h; sourceTree = "<group>"; };
 		05CE70231416416F00CF9F09 /* MZFlashCardPackChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardPackChooser.m; sourceTree = "<group>"; };
-		13177C1B168263170059D9CF /* loudspeaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loudspeaker.png; sourceTree = "<group>"; };
-		13177C1C168263170059D9CF /* loudspeaker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loudspeaker@2x.png"; sourceTree = "<group>"; };
-		13177C24168265070059D9CF /* libiSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiSpeechSDK.a; sourceTree = "<group>"; };
-		13177C26168265310059D9CF /* iSpeechSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iSpeechSDK.h; sourceTree = "<group>"; };
-		13177C27168265310059D9CF /* ISSpeechRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechRecognition.h; sourceTree = "<group>"; };
-		13177C28168265320059D9CF /* ISSpeechRecognitionLocales.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechRecognitionLocales.h; sourceTree = "<group>"; };
-		13177C29168265320059D9CF /* ISSpeechRecognitionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechRecognitionResult.h; sourceTree = "<group>"; };
-		13177C2A168265320059D9CF /* ISSpeechSynthesis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechSynthesis.h; sourceTree = "<group>"; };
-		13177C2B168265330059D9CF /* ISSpeechSynthesisVoices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechSynthesisVoices.h; sourceTree = "<group>"; };
-		13177C2D168265900059D9CF /* iSpeechSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iSpeechSDK.bundle; sourceTree = "<group>"; };
-		13177C2F168265AD0059D9CF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		13177C31168265B80059D9CF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		13177C33168265C40059D9CF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		13177C35168265CB0059D9CF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		13177C37168267F30059D9CF /* ISpeechSDK+Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ISpeechSDK+Compatibility.h"; sourceTree = "<group>"; };
-		13177C38168267F30059D9CF /* ISpeechSDK+Compatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ISpeechSDK+Compatibility.m"; sourceTree = "<group>"; };
+		1303971517D3B2B10013839C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		136C2D2216DD3E48001263FA /* gray_background_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_background_image@2x.png"; sourceTree = "<group>"; };
 		136C2D2316DD3E48001263FA /* gray_background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_background_image.png; sourceTree = "<group>"; };
 		136C2D3416DD40F1001263FA /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
 		136C2D3516DD40F1001263FA /* blueButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButton@2x.png"; sourceTree = "<group>"; };
 		136C2D3616DD40F1001263FA /* blueButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButtonHighlight.png; sourceTree = "<group>"; };
 		136C2D3716DD40F1001263FA /* blueButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButtonHighlight@2x.png"; sourceTree = "<group>"; };
-		136C2D4616DD4FA4001263FA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		136C2D4816DD5720001263FA /* gray_background_image-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_background_image-568h@2x.png"; sourceTree = "<group>"; };
 		136C2D7916DD57F6001263FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		F25C0D78142DEA8900FB8375 /* UIColor+MZFlashCardUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MZFlashCardUtils.h"; sourceTree = "<group>"; };
@@ -383,14 +358,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13177C36168265CB0059D9CF /* CFNetwork.framework in Frameworks */,
-				13177C34168265C40059D9CF /* Security.framework in Frameworks */,
-				13177C32168265B80059D9CF /* SystemConfiguration.framework in Frameworks */,
-				13177C30168265AD0059D9CF /* AudioToolbox.framework in Frameworks */,
 				F2B0792413FEEC7600FEE33D /* UIKit.framework in Frameworks */,
 				F2B0792613FEEC7600FEE33D /* Foundation.framework in Frameworks */,
 				F2B0792813FEEC7600FEE33D /* CoreGraphics.framework in Frameworks */,
-				13177C25168265070059D9CF /* libiSpeechSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,19 +610,6 @@
 			name = "SML Support";
 			sourceTree = "<group>";
 		};
-		13177C2C168265380059D9CF /* iSpeech SDK Headers */ = {
-			isa = PBXGroup;
-			children = (
-				13177C26168265310059D9CF /* iSpeechSDK.h */,
-				13177C27168265310059D9CF /* ISSpeechRecognition.h */,
-				13177C28168265320059D9CF /* ISSpeechRecognitionLocales.h */,
-				13177C29168265320059D9CF /* ISSpeechRecognitionResult.h */,
-				13177C2A168265320059D9CF /* ISSpeechSynthesis.h */,
-				13177C2B168265330059D9CF /* ISSpeechSynthesisVoices.h */,
-			);
-			name = "iSpeech SDK Headers";
-			sourceTree = "<group>";
-		};
 		136C2D7716DD57F5001263FA /* iPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -683,15 +640,10 @@
 		F2B0792213FEEC7600FEE33D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				13177C24168265070059D9CF /* libiSpeechSDK.a */,
 				F2B0792313FEEC7600FEE33D /* UIKit.framework */,
 				F2B0792513FEEC7600FEE33D /* Foundation.framework */,
 				F2B0792713FEEC7600FEE33D /* CoreGraphics.framework */,
 				F2B0794413FEEC7600FEE33D /* SenTestingKit.framework */,
-				13177C35168265CB0059D9CF /* CFNetwork.framework */,
-				13177C33168265C40059D9CF /* Security.framework */,
-				13177C31168265B80059D9CF /* SystemConfiguration.framework */,
-				13177C2F168265AD0059D9CF /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -716,15 +668,12 @@
 				F28074A11401A93A000010F6 /* MZFlashCardItem.h */,
 				F28074A21401A93A000010F6 /* MZFlashCardItem.m */,
 				0577EE291417615900B43E0A /* Google Spreadsheet */,
-				13177C2C168265380059D9CF /* iSpeech SDK Headers */,
 				F25C0D78142DEA8900FB8375 /* UIColor+MZFlashCardUtils.h */,
 				F25C0D79142DEA8900FB8375 /* UIColor+MZFlashCardUtils.m */,
 				05B58D6F140F7E0F00D8AD59 /* NSString+MZFlashCardUtils.h */,
 				05B58D70140F7E0F00D8AD59 /* NSString+MZFlashCardUtils.m */,
 				05B58D73140F7EF500D8AD59 /* NSMutableArray+MZFlashCardUtils.h */,
 				05B58D74140F7EF500D8AD59 /* NSMutableArray+MZFlashCardUtils.m */,
-				13177C37168267F30059D9CF /* ISpeechSDK+Compatibility.h */,
-				13177C38168267F30059D9CF /* ISpeechSDK+Compatibility.m */,
 				F2B0792A13FEEC7600FEE33D /* Supporting Files */,
 			);
 			path = MZFlashCard;
@@ -740,17 +689,14 @@
 				136C2D3516DD40F1001263FA /* blueButton@2x.png */,
 				136C2D3616DD40F1001263FA /* blueButtonHighlight.png */,
 				136C2D3716DD40F1001263FA /* blueButtonHighlight@2x.png */,
-				13177C1B168263170059D9CF /* loudspeaker.png */,
-				13177C1C168263170059D9CF /* loudspeaker@2x.png */,
 				05A3A6CD142CC6630078E85F /* cellBackground_3.png */,
 				051171BB1428DE7100015F3E /* demo_blue.jpg */,
-				136C2D4616DD4FA4001263FA /* Default-568h@2x.png */,
+				1303971517D3B2B10013839C /* Default-568h@2x.png */,
 				0592F453140E621100960EBE /* exampleDataBase.csv */,
 				F28434D214005E47008512C9 /* exampleDataBase.plist */,
 				F280749A1401295E000010F6 /* convert_csv2plist.sh */,
 				F2B0792B13FEEC7600FEE33D /* MZFlashCard-Info.plist */,
 				F2B0792C13FEEC7600FEE33D /* InfoPlist.strings */,
-				13177C2D168265900059D9CF /* iSpeechSDK.bundle */,
 				F2B0792F13FEEC7600FEE33D /* main.m */,
 				F2B0793113FEEC7600FEE33D /* MZFlashCard-Prefix.pch */,
 			);
@@ -822,7 +768,7 @@
 		F2B0791613FEEC7500FEE33D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = F2B0791913FEEC7500FEE33D /* Build configuration list for PBXProject "MZFlashCard" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -855,18 +801,15 @@
 				05A76F7014237BEE00C548DD /* MZGoogleController.xib in Resources */,
 				051171BC1428DE7100015F3E /* demo_blue.jpg in Resources */,
 				05A3A6CE142CC6630078E85F /* cellBackground_3.png in Resources */,
-				13177C1D168263170059D9CF /* loudspeaker.png in Resources */,
-				13177C1E168263170059D9CF /* loudspeaker@2x.png in Resources */,
-				13177C2E168265900059D9CF /* iSpeechSDK.bundle in Resources */,
 				136C2D2416DD3E49001263FA /* gray_background_image@2x.png in Resources */,
 				136C2D2616DD3E49001263FA /* gray_background_image.png in Resources */,
 				136C2D3816DD40F1001263FA /* blueButton.png in Resources */,
 				136C2D3A16DD40F1001263FA /* blueButton@2x.png in Resources */,
 				136C2D3C16DD40F1001263FA /* blueButtonHighlight.png in Resources */,
 				136C2D3E16DD40F1001263FA /* blueButtonHighlight@2x.png in Resources */,
-				136C2D4716DD4FA5001263FA /* Default-568h@2x.png in Resources */,
 				136C2D4916DD5720001263FA /* gray_background_image-568h@2x.png in Resources */,
 				136C2D7A16DD57F6001263FA /* MainWindow-iPad.xib in Resources */,
+				1303971617D3B2B10013839C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,7 +952,6 @@
 				05A770621423809900C548DD /* GDataXMLNode.m in Sources */,
 				05A3A6D1142CCF3C0078E85F /* MZSettingsViewController.m in Sources */,
 				F25C0D7A142DEA8900FB8375 /* UIColor+MZFlashCardUtils.m in Sources */,
-				13177C39168267F30059D9CF /* ISpeechSDK+Compatibility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1133,7 +1075,7 @@
 				GCC_PREFIX_HEADER = "MZFlashCard/MZFlashCard-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MZFlashCard/MZFlashCard-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1156,7 +1098,7 @@
 				GCC_PREFIX_HEADER = "MZFlashCard/MZFlashCard-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MZFlashCard/MZFlashCard-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

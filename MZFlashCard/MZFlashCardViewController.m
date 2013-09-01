@@ -9,7 +9,6 @@
 #import "MZFlashCardViewController.h"
 #import "MZFlashCardItem.h"
 #import "NSString+MZFlashCardUtils.h"
-#import "ISpeechSDK.h"
 
 #define LIMIT 10.0 //a LIMIT százaléknyi legrosszabb szóból dobja a következőt; maximum 100.0
 
@@ -54,17 +53,6 @@
     _flashCardItem.viewed++;
     
     [self goToNextRun];
-}
-
-- (IBAction)loudspeakerButtonTouched:(id)sender
-{
-    ISSpeechSynthesis *synthesis = [[ISSpeechSynthesis alloc] initWithText:solutionLabel.text];
-    
-    NSError *err;
-    
-    if(![synthesis speak:&err]) {
-        NSLog(@"ERROR: %@", err);
-    }
 }
 
 - (void) goToNextRun 

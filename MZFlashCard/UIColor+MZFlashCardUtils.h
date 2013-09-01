@@ -6,7 +6,6 @@
 //  Copyright 2011 CAS Software Kft. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
 @interface UIColor (UIColor_MZFlashCardUtils)
 
