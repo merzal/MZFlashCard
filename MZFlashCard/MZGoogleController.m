@@ -44,23 +44,24 @@
 
 - (IBAction)getSpreadsheetsButtonTouched
 {
-    NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-    
-    NSString *username = _usernameTextField.text;
-    username = [username stringByTrimmingCharactersInSet:whitespace];
-    
-    if ([username rangeOfString:@"@"].location == NSNotFound) 
-    {
-        // if no domain was supplied, add @gmail.com
-        username = [username stringByAppendingString:@"@gmail.com"];
-    }
-    
-    _usernameTextField.text = username;
-    
-    [_usernameTextField resignFirstResponder];
-    [_passwordTextField resignFirstResponder];
-    
-    [self fetchFeedOfSpreadsheets];
+    [self importData];
+//    NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+//    
+//    NSString *username = _usernameTextField.text;
+//    username = [username stringByTrimmingCharactersInSet:whitespace];
+//    
+//    if ([username rangeOfString:@"@"].location == NSNotFound) 
+//    {
+//        // if no domain was supplied, add @gmail.com
+//        username = [username stringByAppendingString:@"@gmail.com"];
+//    }
+//    
+//    _usernameTextField.text = username;
+//    
+//    [_usernameTextField resignFirstResponder];
+//    [_passwordTextField resignFirstResponder];
+//    
+//    [self fetchFeedOfSpreadsheets];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -391,6 +392,9 @@
 
 - (void)importData
 {
+    [_importedData addObject:@[@"egy", @"egyke"]];
+    [_importedData addObject:@[@"kettő", @"kettőke"]];
+    
     if ([_importedData count] == 0) 
     {
         UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"Error" 
@@ -403,7 +407,8 @@
     }
     else
     {
-        [_cardPackChooserViewController addCardPackFromArray:_importedData withTitle:[[_entryFeed title] stringValue]];
+        
+        [_cardPackChooserViewController addCardPackFromArray:_importedData withTitle:@"valami"/*[[_entryFeed title] stringValue]*/];
         
         [self dismissModalViewControllerAnimated:YES];
     }

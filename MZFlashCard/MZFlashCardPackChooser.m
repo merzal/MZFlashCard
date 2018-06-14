@@ -271,9 +271,9 @@
 {
     NSString* utf8Title = [title stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
-    NSString* cardPackTitle = [[NSUserDefaults standardUserDefaults] valueForKey:utf8Title];
+//    NSString* cardPackTitle = [[NSUserDefaults standardUserDefaults] valueForKey:utf8Title];
     
-    if (cardPackTitle) 
+    if (0/*cardPackTitle*/)
     {
         //cardpack is already here
         UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"This cardpack is already available!" 
