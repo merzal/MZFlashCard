@@ -10,6 +10,9 @@
 @interface MZFlashCardPackChooser ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *noCardPackAvailableLabel;
+
+@property (nonatomic, strong) NSMutableArray* cardPacks;
 
 @end
 
@@ -30,6 +33,8 @@
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCardPackButtonPushed:)];
+    
+    self.cardPacks = [NSMutableArray array];
 }
 
 #pragma mark - Table view data source
@@ -41,7 +46,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    self.noCardPackAvailableLabel.hidden = self.cardPacks.count != 0;
+    
+    tableView.separatorStyle = self.cardPacks.count == 0 ? UITableViewCellSeparatorStyleNone : UITableViewCellSeparatorStyleSingleLine;
+    
+    return self.cardPacks.count;
 }
 
 /*
