@@ -13,6 +13,7 @@
 		057F2A4420D3D534005C593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057F2A4320D3D534005C593E /* Assets.xcassets */; };
 		057F2A4720D3D534005C593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057F2A4520D3D534005C593E /* LaunchScreen.storyboard */; };
 		057F2A4A20D3D534005C593E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 057F2A4920D3D534005C593E /* main.m */; };
+		137CACFD20D56B59003575C2 /* MZFlashCardPackChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CACFC20D56B59003575C2 /* MZFlashCardPackChooser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		057F2A4620D3D534005C593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		057F2A4820D3D534005C593E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057F2A4920D3D534005C593E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		137CACFB20D56B59003575C2 /* MZFlashCardPackChooser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardPackChooser.h; sourceTree = "<group>"; };
+		137CACFC20D56B59003575C2 /* MZFlashCardPackChooser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardPackChooser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				057F2A3B20D3D531005C593E /* AppDelegate.m */,
 				057F2A3D20D3D531005C593E /* MZRootViewController.h */,
 				057F2A3E20D3D531005C593E /* MZRootViewController.m */,
+				137CACFB20D56B59003575C2 /* MZFlashCardPackChooser.h */,
+				137CACFC20D56B59003575C2 /* MZFlashCardPackChooser.m */,
 				057F2A4020D3D531005C593E /* Main.storyboard */,
 				057F2A4320D3D534005C593E /* Assets.xcassets */,
 				057F2A4520D3D534005C593E /* LaunchScreen.storyboard */,
@@ -140,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137CACFD20D56B59003575C2 /* MZFlashCardPackChooser.m in Sources */,
 				057F2A3F20D3D531005C593E /* MZRootViewController.m in Sources */,
 				057F2A4A20D3D534005C593E /* main.m in Sources */,
 				057F2A3C20D3D531005C593E /* AppDelegate.m in Sources */,
