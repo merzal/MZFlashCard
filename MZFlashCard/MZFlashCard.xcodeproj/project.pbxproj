@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		057F2A3C20D3D531005C593E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 057F2A3B20D3D531005C593E /* AppDelegate.m */; };
-		057F2A3F20D3D531005C593E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057F2A3E20D3D531005C593E /* ViewController.m */; };
+		057F2A3F20D3D531005C593E /* MZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057F2A3E20D3D531005C593E /* MZRootViewController.m */; };
 		057F2A4220D3D531005C593E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057F2A4020D3D531005C593E /* Main.storyboard */; };
 		057F2A4420D3D534005C593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057F2A4320D3D534005C593E /* Assets.xcassets */; };
 		057F2A4720D3D534005C593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057F2A4520D3D534005C593E /* LaunchScreen.storyboard */; };
@@ -19,8 +19,8 @@
 		057F2A3720D3D531005C593E /* MZFlashCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MZFlashCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057F2A3A20D3D531005C593E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		057F2A3B20D3D531005C593E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		057F2A3D20D3D531005C593E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		057F2A3E20D3D531005C593E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		057F2A3D20D3D531005C593E /* MZRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZRootViewController.h; sourceTree = "<group>"; };
+		057F2A3E20D3D531005C593E /* MZRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZRootViewController.m; sourceTree = "<group>"; };
 		057F2A4120D3D531005C593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		057F2A4320D3D534005C593E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		057F2A4620D3D534005C593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				057F2A3A20D3D531005C593E /* AppDelegate.h */,
 				057F2A3B20D3D531005C593E /* AppDelegate.m */,
-				057F2A3D20D3D531005C593E /* ViewController.h */,
-				057F2A3E20D3D531005C593E /* ViewController.m */,
+				057F2A3D20D3D531005C593E /* MZRootViewController.h */,
+				057F2A3E20D3D531005C593E /* MZRootViewController.m */,
 				057F2A4020D3D531005C593E /* Main.storyboard */,
 				057F2A4320D3D534005C593E /* Assets.xcassets */,
 				057F2A4520D3D534005C593E /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				057F2A3F20D3D531005C593E /* ViewController.m in Sources */,
+				057F2A3F20D3D531005C593E /* MZRootViewController.m in Sources */,
 				057F2A4A20D3D534005C593E /* main.m in Sources */,
 				057F2A3C20D3D531005C593E /* AppDelegate.m in Sources */,
 			);

@@ -13,9 +13,9 @@
         <!--Navigation Controller-->
         <scene sceneID="fk0-QP-JNT">
             <objects>
-                <navigationController id="mKc-FC-leH" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="mKc-FC-leH" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J5N-T6-9X8">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -26,20 +26,87 @@
             </objects>
             <point key="canvasLocation" x="-1335" y="-90"/>
         </scene>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MZRootViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunflowers" translatesAutoresizingMaskIntoConstraints="NO" id="ON2-8Y-6LW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTE-g2-bzR">
+                                <rect key="frame" x="56.5" y="183.5" width="262.5" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MZFlashCard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upq-4v-9oU">
+                                        <rect key="frame" x="10" y="20" width="242.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGn-ad-wec">
+                                        <rect key="frame" x="97.5" y="184" width="67" height="38"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                        <state key="normal" title="Learn">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="learnButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjv-H3-qN8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlv-wS-QFM">
+                                        <rect key="frame" x="78" y="242" width="106" height="38"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="settingsButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ias-tK-zIc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qlv-wS-QFM" firstAttribute="centerX" secondItem="PTE-g2-bzR" secondAttribute="centerX" id="0zS-rd-OtC"/>
+                                    <constraint firstItem="jGn-ad-wec" firstAttribute="top" relation="greaterThanOrEqual" secondItem="upq-4v-9oU" secondAttribute="bottom" constant="20" id="1OS-ph-XTo"/>
+                                    <constraint firstAttribute="bottom" secondItem="qlv-wS-QFM" secondAttribute="bottom" constant="20" id="GDr-Ig-3P8"/>
+                                    <constraint firstItem="jGn-ad-wec" firstAttribute="centerX" secondItem="PTE-g2-bzR" secondAttribute="centerX" id="I8G-0F-XcS"/>
+                                    <constraint firstAttribute="height" constant="300" id="Jke-1K-rY8"/>
+                                    <constraint firstItem="upq-4v-9oU" firstAttribute="top" secondItem="PTE-g2-bzR" secondAttribute="top" constant="20" id="Lf3-Vk-0ER"/>
+                                    <constraint firstItem="upq-4v-9oU" firstAttribute="leading" secondItem="PTE-g2-bzR" secondAttribute="leading" constant="10" id="lSs-KA-Cej"/>
+                                    <constraint firstAttribute="trailing" secondItem="upq-4v-9oU" secondAttribute="trailing" constant="10" id="o1Z-6C-1O7"/>
+                                    <constraint firstItem="qlv-wS-QFM" firstAttribute="top" secondItem="jGn-ad-wec" secondAttribute="bottom" constant="20" id="vAJ-LY-aq8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qll-nK-cDy" firstAttribute="bottom" secondItem="ON2-8Y-6LW" secondAttribute="bottom" id="3PG-Wb-3dE"/>
+                            <constraint firstItem="ON2-8Y-6LW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dg8-8Z-nt7"/>
+                            <constraint firstItem="PTE-g2-bzR" firstAttribute="width" secondItem="ON2-8Y-6LW" secondAttribute="width" multiplier="0.7" id="cBZ-fN-EXI"/>
+                            <constraint firstItem="PTE-g2-bzR" firstAttribute="centerX" secondItem="ON2-8Y-6LW" secondAttribute="centerX" id="j1h-OH-3Pw"/>
+                            <constraint firstItem="ON2-8Y-6LW" firstAttribute="leading" secondItem="qll-nK-cDy" secondAttribute="leading" id="lA5-JC-O47"/>
+                            <constraint firstItem="PTE-g2-bzR" firstAttribute="centerY" secondItem="ON2-8Y-6LW" secondAttribute="centerY" id="vb4-sl-1Yx"/>
+                            <constraint firstItem="qll-nK-cDy" firstAttribute="trailing" secondItem="ON2-8Y-6LW" secondAttribute="trailing" id="zpc-Zf-te7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qll-nK-cDy"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="mtw-24-8V0"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-578" y="-90"/>
+            <point key="canvasLocation" x="-578.39999999999998" y="-90.404797601199405"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sunflowers" width="341" height="256"/>
+    </resources>
 </document>
