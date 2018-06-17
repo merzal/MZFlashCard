@@ -14,6 +14,9 @@
 		057F2A4720D3D534005C593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057F2A4520D3D534005C593E /* LaunchScreen.storyboard */; };
 		057F2A4A20D3D534005C593E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 057F2A4920D3D534005C593E /* main.m */; };
 		137CACFD20D56B59003575C2 /* MZFlashCardPackChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CACFC20D56B59003575C2 /* MZFlashCardPackChooser.m */; };
+		137CAD0120D57D97003575C2 /* MZFlashCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CAD0020D57D97003575C2 /* MZFlashCardItem.m */; };
+		137CAD0420D58361003575C2 /* MZFlashCardPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CAD0320D58361003575C2 /* MZFlashCardPack.m */; };
+		137CAD0820D588C0003575C2 /* NSString+FilePathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CAD0720D588C0003575C2 /* NSString+FilePathUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		057F2A4920D3D534005C593E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		137CACFB20D56B59003575C2 /* MZFlashCardPackChooser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardPackChooser.h; sourceTree = "<group>"; };
 		137CACFC20D56B59003575C2 /* MZFlashCardPackChooser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardPackChooser.m; sourceTree = "<group>"; };
+		137CACFF20D57D97003575C2 /* MZFlashCardItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardItem.h; sourceTree = "<group>"; };
+		137CAD0020D57D97003575C2 /* MZFlashCardItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardItem.m; sourceTree = "<group>"; };
+		137CAD0220D58361003575C2 /* MZFlashCardPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardPack.h; sourceTree = "<group>"; };
+		137CAD0320D58361003575C2 /* MZFlashCardPack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardPack.m; sourceTree = "<group>"; };
+		137CAD0620D588C0003575C2 /* NSString+FilePathUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FilePathUtilities.h"; sourceTree = "<group>"; };
+		137CAD0720D588C0003575C2 /* NSString+FilePathUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FilePathUtilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,8 @@
 		057F2A3920D3D531005C593E /* MZFlashCard */ = {
 			isa = PBXGroup;
 			children = (
+				137CAD0520D58872003575C2 /* Categories */,
+				137CACFE20D57D7C003575C2 /* Models */,
 				057F2A3A20D3D531005C593E /* AppDelegate.h */,
 				057F2A3B20D3D531005C593E /* AppDelegate.m */,
 				057F2A3D20D3D531005C593E /* MZRootViewController.h */,
@@ -74,6 +85,26 @@
 				057F2A4920D3D534005C593E /* main.m */,
 			);
 			path = MZFlashCard;
+			sourceTree = "<group>";
+		};
+		137CACFE20D57D7C003575C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				137CACFF20D57D97003575C2 /* MZFlashCardItem.h */,
+				137CAD0020D57D97003575C2 /* MZFlashCardItem.m */,
+				137CAD0220D58361003575C2 /* MZFlashCardPack.h */,
+				137CAD0320D58361003575C2 /* MZFlashCardPack.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		137CAD0520D58872003575C2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				137CAD0620D588C0003575C2 /* NSString+FilePathUtilities.h */,
+				137CAD0720D588C0003575C2 /* NSString+FilePathUtilities.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137CAD0820D588C0003575C2 /* NSString+FilePathUtilities.m in Sources */,
 				137CACFD20D56B59003575C2 /* MZFlashCardPackChooser.m in Sources */,
 				057F2A3F20D3D531005C593E /* MZRootViewController.m in Sources */,
+				137CAD0420D58361003575C2 /* MZFlashCardPack.m in Sources */,
+				137CAD0120D57D97003575C2 /* MZFlashCardItem.m in Sources */,
 				057F2A4A20D3D534005C593E /* main.m in Sources */,
 				057F2A3C20D3D531005C593E /* AppDelegate.m in Sources */,
 			);

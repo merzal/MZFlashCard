@@ -6,13 +6,17 @@
 //
 
 #import "MZFlashCardPackChooser.h"
+#import "MZFlashCardPack.h"
+#import "NSString+FilePathUtilities.h"
 
 @interface MZFlashCardPackChooser ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *noCardPackAvailableLabel;
 
-@property (nonatomic, strong) NSMutableArray* cardPacks;
+@property (nonatomic, strong) NSMutableArray<MZFlashCardPack*>* cardPacks;
+
+- (void)saveCardPacksToDisk;
 
 @end
 
@@ -63,55 +67,48 @@
 }
 */
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - Actions
 
 - (void)addCardPackButtonPushed:(UIBarButtonItem*)barButtonItem
 {
+    NSArray* flashCards = @[[[MZFlashCardItem alloc] initWithChallenge:@"challenge1" solution:@"solution1"],
+                            [[MZFlashCardItem alloc] initWithChallenge:@"challenge2" solution:@"solution2"],
+                            [[MZFlashCardItem alloc] initWithChallenge:@"challenge3" solution:@"solution3"],
+                            [[MZFlashCardItem alloc] initWithChallenge:@"challenge4" solution:@"solution4"],
+                            [[MZFlashCardItem alloc] initWithChallenge:@"challenge5" solution:@"solution5"],
+                            ];
     
+    NSArray* cardPacks = @[[[MZFlashCardPack alloc] initWithTitle:@"First card pack" flashCards:flashCards],
+                           [[MZFlashCardPack alloc] initWithTitle:@"Second card pack" flashCards:flashCards],
+                           [[MZFlashCardPack alloc] initWithTitle:@"Third card pack" flashCards:flashCards],
+                           [[MZFlashCardPack alloc] initWithTitle:@"Fourth card pack" flashCards:flashCards],
+                           ];
+    
+    self.cardPacks = [NSMutableArray arrayWithArray:cardPacks];
+    
+    [self saveCardPacksToDisk];
+}
+
+#pragma mark - Private helper methods
+
+- (void)saveCardPacksToDisk
+{
+    for (MZFlashCardPack* cardPack in self.cardPacks)
+    {
+        NSString* fileName = [cardPack.title stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
+        
+        NSString* finalFileName = [NSString stringWithFormat:@"%@.mzcf", fileName];
+        
+        NSString* filePath = [[NSString applicationDocumentsDirectory] stringByAppendingPathComponent:finalFileName];
+
+        [NSKeyedArchiver archiveRootObject:cardPack toFile:filePath];
+    }
 }
 
 @end
