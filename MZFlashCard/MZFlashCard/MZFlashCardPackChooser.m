@@ -8,6 +8,10 @@
 #import "MZFlashCardPackChooser.h"
 #import "MZFlashCardPack.h"
 #import "NSString+FilePathUtilities.h"
+#import "MZFlashCardPackChooserTableViewCell.h"
+
+#define MZ_FLASHCARD_FILE_EXTENSION @"mzfc"
+#define CARD_PACK_CELL_ID @"CardPackCellID"
 
 @interface MZFlashCardPackChooser ()
 
@@ -38,7 +42,11 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCardPackButtonPushed:)];
     
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MZFlashCardPackChooserTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CARD_PACK_CELL_ID];
+    
     self.cardPacks = [NSMutableArray array];
+    
+    [self loadCardPacksFromDisk];
 }
 
 #pragma mark - Table view data source
@@ -57,45 +65,72 @@
     return self.cardPacks.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MZFlashCardPack* cardPackForCell = self.cardPacks[indexPath.row];
     
-    // Configure the cell...
+    MZFlashCardPackChooserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CARD_PACK_CELL_ID forIndexPath:indexPath];
+
+    cell.titleLabel.text = cardPackForCell.title;
     
     return cell;
 }
-*/
-
-
-
-
-
-
 
 #pragma mark - Actions
 
 - (void)addCardPackButtonPushed:(UIBarButtonItem*)barButtonItem
 {
-    NSArray* flashCards = @[[[MZFlashCardItem alloc] initWithChallenge:@"challenge1" solution:@"solution1"],
-                            [[MZFlashCardItem alloc] initWithChallenge:@"challenge2" solution:@"solution2"],
-                            [[MZFlashCardItem alloc] initWithChallenge:@"challenge3" solution:@"solution3"],
-                            [[MZFlashCardItem alloc] initWithChallenge:@"challenge4" solution:@"solution4"],
-                            [[MZFlashCardItem alloc] initWithChallenge:@"challenge5" solution:@"solution5"],
-                            ];
-    
-    NSArray* cardPacks = @[[[MZFlashCardPack alloc] initWithTitle:@"First card pack" flashCards:flashCards],
-                           [[MZFlashCardPack alloc] initWithTitle:@"Second card pack" flashCards:flashCards],
-                           [[MZFlashCardPack alloc] initWithTitle:@"Third card pack" flashCards:flashCards],
-                           [[MZFlashCardPack alloc] initWithTitle:@"Fourth card pack" flashCards:flashCards],
-                           ];
-    
-    self.cardPacks = [NSMutableArray arrayWithArray:cardPacks];
-    
-    [self saveCardPacksToDisk];
+    if (self.cardPacks.count == 0)
+    {
+        NSArray* flashCards = @[[[MZFlashCardItem alloc] initWithChallenge:@"challenge1" solution:@"solution1"],
+                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge2" solution:@"solution2"],
+                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge3" solution:@"solution3"],
+                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge4" solution:@"solution4"],
+                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge5" solution:@"solution5"],
+                                ];
+        
+        NSArray* cardPacks = @[[[MZFlashCardPack alloc] initWithTitle:@"First card pack" flashCards:flashCards],
+                               [[MZFlashCardPack alloc] initWithTitle:@"Second card pack" flashCards:flashCards],
+                               [[MZFlashCardPack alloc] initWithTitle:@"Third card pack" flashCards:flashCards],
+                               [[MZFlashCardPack alloc] initWithTitle:@"Fourth card pack" flashCards:flashCards],
+                               ];
+        
+        self.cardPacks = [NSMutableArray arrayWithArray:cardPacks];
+        
+        [self saveCardPacksToDisk];
+    }
 }
 
 #pragma mark - Private helper methods
+
+- (void)loadCardPacksFromDisk
+{
+    [self.cardPacks removeAllObjects];
+    
+    NSArray* fileNames = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[NSString applicationDocumentsDirectory] error:nil];
+    
+    for (NSString* fileName in fileNames)
+    {
+        NSString* fileExtension = [fileName pathExtension];
+        
+        if ([[fileExtension lowercaseString] isEqualToString:MZ_FLASHCARD_FILE_EXTENSION])
+        {
+            NSString* filePath = [[NSString applicationDocumentsDirectory] stringByAppendingPathComponent:fileName];
+            
+            MZFlashCardPack* cardPack = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+            
+            [self.cardPacks addObject:cardPack];
+        }
+    }
+    
+    for (MZFlashCardPack* cardPack in self.cardPacks)
+    {
+        NSLog(@"Loaded cardPack: %@", cardPack.title);
+    }
+    
+    [self.tableView reloadData];
+}
 
 - (void)saveCardPacksToDisk
 {
@@ -103,7 +138,7 @@
     {
         NSString* fileName = [cardPack.title stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
         
-        NSString* finalFileName = [NSString stringWithFormat:@"%@.mzcf", fileName];
+        NSString* finalFileName = [NSString stringWithFormat:@"%@.%@", fileName, MZ_FLASHCARD_FILE_EXTENSION];
         
         NSString* filePath = [[NSString applicationDocumentsDirectory] stringByAppendingPathComponent:finalFileName];
 
