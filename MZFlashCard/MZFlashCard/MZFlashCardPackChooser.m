@@ -77,6 +77,21 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [self deleteCardPackAtIndex:indexPath.row];
+        
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
 #pragma mark - Actions
 
 - (void)addCardPackButtonPushed:(UIBarButtonItem*)barButtonItem
@@ -99,6 +114,8 @@
         self.cardPacks = [NSMutableArray arrayWithArray:cardPacks];
         
         [self saveCardPacksToDisk];
+        
+        [self.tableView reloadData];
     }
 }
 
@@ -144,6 +161,21 @@
 
         [NSKeyedArchiver archiveRootObject:cardPack toFile:filePath];
     }
+}
+
+- (void)deleteCardPackAtIndex:(NSInteger)index
+{
+    MZFlashCardPack* cardPackToDelete = self.cardPacks[index];
+    
+    NSString* fileName = [cardPackToDelete.title stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
+    
+    NSString* finalFileName = [NSString stringWithFormat:@"%@.%@", fileName, MZ_FLASHCARD_FILE_EXTENSION];
+    
+    NSString* filePath = [[NSString applicationDocumentsDirectory] stringByAppendingPathComponent:finalFileName];
+    
+    [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+    
+    [self.cardPacks removeObjectAtIndex:index];
 }
 
 @end
