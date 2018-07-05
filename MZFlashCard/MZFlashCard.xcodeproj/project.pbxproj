@@ -15,6 +15,7 @@
 		057F2A4420D3D534005C593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057F2A4320D3D534005C593E /* Assets.xcassets */; };
 		057F2A4720D3D534005C593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057F2A4520D3D534005C593E /* LaunchScreen.storyboard */; };
 		057F2A4A20D3D534005C593E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 057F2A4920D3D534005C593E /* main.m */; };
+		0581789120EE664100605513 /* MZFlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0581788F20EE664100605513 /* MZFlashCardViewController.m */; };
 		137CACFD20D56B59003575C2 /* MZFlashCardPackChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CACFC20D56B59003575C2 /* MZFlashCardPackChooser.m */; };
 		137CAD0120D57D97003575C2 /* MZFlashCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CAD0020D57D97003575C2 /* MZFlashCardItem.m */; };
 		137CAD0420D58361003575C2 /* MZFlashCardPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CAD0320D58361003575C2 /* MZFlashCardPack.m */; };
@@ -35,6 +36,8 @@
 		057F2A4620D3D534005C593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		057F2A4820D3D534005C593E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057F2A4920D3D534005C593E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0581788E20EE664100605513 /* MZFlashCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardViewController.h; sourceTree = "<group>"; };
+		0581788F20EE664100605513 /* MZFlashCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardViewController.m; sourceTree = "<group>"; };
 		137CACFB20D56B59003575C2 /* MZFlashCardPackChooser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardPackChooser.h; sourceTree = "<group>"; };
 		137CACFC20D56B59003575C2 /* MZFlashCardPackChooser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardPackChooser.m; sourceTree = "<group>"; };
 		137CACFF20D57D97003575C2 /* MZFlashCardItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardItem.h; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				0561820120E6788400275891 /* MZFlashCardPackChooserTableViewCell.h */,
 				0561820220E6788400275891 /* MZFlashCardPackChooserTableViewCell.m */,
 				0561820320E6788400275891 /* MZFlashCardPackChooserTableViewCell.xib */,
+				0581788E20EE664100605513 /* MZFlashCardViewController.h */,
+				0581788F20EE664100605513 /* MZFlashCardViewController.m */,
 				057F2A4020D3D531005C593E /* Main.storyboard */,
 				057F2A4320D3D534005C593E /* Assets.xcassets */,
 				057F2A4520D3D534005C593E /* LaunchScreen.storyboard */,
@@ -189,6 +194,7 @@
 				137CACFD20D56B59003575C2 /* MZFlashCardPackChooser.m in Sources */,
 				057F2A3F20D3D531005C593E /* MZRootViewController.m in Sources */,
 				137CAD0420D58361003575C2 /* MZFlashCardPack.m in Sources */,
+				0581789120EE664100605513 /* MZFlashCardViewController.m in Sources */,
 				0561820420E6788400275891 /* MZFlashCardPackChooserTableViewCell.m in Sources */,
 				137CAD0120D57D97003575C2 /* MZFlashCardItem.m in Sources */,
 				057F2A4A20D3D534005C593E /* main.m in Sources */,

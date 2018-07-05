@@ -9,6 +9,7 @@
 #import "MZFlashCardPack.h"
 #import "NSString+FilePathUtilities.h"
 #import "MZFlashCardPackChooserTableViewCell.h"
+#import "MZFlashCardViewController.h"
 
 #define MZ_FLASHCARD_FILE_EXTENSION @"mzfc"
 #define CARD_PACK_CELL_ID @"CardPackCellID"
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *noCardPackAvailableLabel;
 
 @property (nonatomic, strong) NSMutableArray<MZFlashCardPack*>* cardPacks;
+@property (nonatomic, strong) MZFlashCardPack* selectedCardPack;
 
 - (void)saveCardPacksToDisk;
 
@@ -89,6 +91,26 @@
         [self deleteCardPackAtIndex:indexPath.row];
         
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedCardPack = self.cardPacks[indexPath.row];
+    
+    [self performSegueWithIdentifier:@"showFlashCardVC" sender:nil];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showFlashCardVC"])
+    {
+        MZFlashCardViewController* flashCardVC = (MZFlashCardViewController*)segue.destinationViewController;
+        flashCardVC.cardPack = self.selectedCardPack;
     }
 }
 
