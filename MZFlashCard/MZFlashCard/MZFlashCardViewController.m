@@ -40,7 +40,11 @@
     self.currentFlashCardItem = [self getRandomFlashCardItem];
     
     self.challengeLabel.text = [self getCurrentFlashCardChallengeText];
+    
+    self.solutionLabel.text = @"...";
 }
+
+#pragma mark - Private methods
 
 - (MZFlashCardItem*)getRandomFlashCardItem
 {
@@ -69,6 +73,8 @@
             return result;
         }];
         
+        NSLog(@"sorted flashCards: %@", self.cardPack.flashCards);
+        
         unsigned int countOfCardsHaveChance = (unsigned int)ceilf((self.cardPack.flashCards.count * (PERCENT_OF_WEAKEST_CARDS_LIMIT / 100.0f)));
         
         if (countOfCardsHaveChance <= 1)
@@ -91,19 +97,40 @@
     return nextFlashCard;
 }
 
+- (void)goToNextRun
+{
+    self.currentFlashCardItem = [self getRandomFlashCardItem];
+    
+    self.challengeLabel.text = [self getCurrentFlashCardChallengeText];
+    
+    self.solutionLabel.text = @"...";
+}
+
 - (NSString*)getCurrentFlashCardChallengeText
 {
     return self.isChallengeAbove ? self.currentFlashCardItem.challenge : self.currentFlashCardItem.solution;
 }
 
+- (NSString*)getCurrentFlashCardSolutionText
+{
+    return self.isChallengeAbove ? self.currentFlashCardItem.solution : self.currentFlashCardItem.challenge;
+}
+
+#pragma mark - Actions
+
 - (IBAction)okButtonTouched:(id)sender
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    self.currentFlashCardItem.viewed++;
+    self.currentFlashCardItem.solved++;
+    
+    [self goToNextRun];
 }
 
 - (IBAction)dontOkButtonTouched:(id)sender
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    self.currentFlashCardItem.viewed++;
+    
+    [self goToNextRun];
 }
 
 - (IBAction)challengeLabelTouched:(id)sender
@@ -113,7 +140,7 @@
 
 - (IBAction)solutionLabelTouched:(id)sender
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    self.solutionLabel.text = [self getCurrentFlashCardSolutionText];
 }
 
 @end

@@ -39,7 +39,7 @@ static NSString* const kGoodnessIndexCodingKey = @"goodnessIndex";
 - (NSInteger)goodnessIndex
 {
     NSInteger missed = self.viewed - self.solved;
-    NSInteger goodnessIndex = missed == 0 ? 0 : self.viewed * self.solved / missed;
+    NSInteger goodnessIndex = self.viewed * self.solved / (missed  == 0 ? 1 : missed);
     
     return goodnessIndex;
 }
@@ -69,6 +69,11 @@ static NSString* const kGoodnessIndexCodingKey = @"goodnessIndex";
     [aCoder encodeObject:[NSNumber numberWithInteger:self.viewed] forKey:kViewedCodingKey];
     [aCoder encodeObject:[NSNumber numberWithInteger:self.solved] forKey:kSolvedCodingKey];
     [aCoder encodeObject:[NSNumber numberWithInteger:self.goodnessIndex] forKey:kGoodnessIndexCodingKey];
+}
+
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"challenge: %@, goodness index: %lu", self.challenge, self.goodnessIndex];
 }
 
 @end
