@@ -40,49 +40,52 @@
     self.currentFlashCardItem = [self getRandomFlashCardItem];
     
     self.challengeLabel.text = [self getCurrentFlashCardChallengeText];
-//    [self setupFontSizeForLabel:challengeLabel];
 }
 
 - (MZFlashCardItem*)getRandomFlashCardItem
 {
-    // sort flashCardItems by goodnessIndex
-    [self.cardPack.flashCards sortUsingComparator:^NSComparisonResult(MZFlashCardItem*  _Nonnull card1, MZFlashCardItem*  _Nonnull card2) {
-        
-        NSComparisonResult result = NSOrderedSame;
-        
-        if (card1.goodnessIndex < card2.goodnessIndex)
-        {
-            result = NSOrderedAscending;
-        }
-        else if (card1.goodnessIndex > card2.goodnessIndex)
-        {
-            result = NSOrderedDescending;
-        }
-        
-        return result;
-    }];
+    MZFlashCardItem* nextFlashCard;
     
-    NSInteger countOfCardsHaveChance = (NSInteger)floor(self.cardPack.flashCards.count * (PERCENT_OF_WEAKEST_CARDS_LIMIT / 100.0f));
-    
-    if (countOfCardsHaveChance <= 1)
+    if (self.cardPack.flashCards.count == 1)
     {
-        countOfCardsHaveChance = 2;
+        nextFlashCard = [self.cardPack.flashCards firstObject];
     }
-    
-    NSInteger randomIndex = arc4random() % countOfCardsHaveChance;
-    
-    MZFlashCardItem* nextFlashCard = self.cardPack.flashCards[randomIndex];
-    
-    // if the count of flashcard items is too little
-    NSInteger maxRoundCounter = 10;
-    
-    while ([nextFlashCard isEqual:self.currentFlashCardItem])
+    else if (self.cardPack.flashCards.count > 1)
     {
-        randomIndex = arc4random() % countOfCardsHaveChance;
+        // sort flashCardItems by goodnessIndex
+        [self.cardPack.flashCards sortUsingComparator:^NSComparisonResult(MZFlashCardItem*  _Nonnull card1, MZFlashCardItem*  _Nonnull card2) {
+            
+            NSComparisonResult result = NSOrderedSame;
+            
+            if (card1.goodnessIndex < card2.goodnessIndex)
+            {
+                result = NSOrderedAscending;
+            }
+            else if (card1.goodnessIndex > card2.goodnessIndex)
+            {
+                result = NSOrderedDescending;
+            }
+            
+            return result;
+        }];
+        
+        unsigned int countOfCardsHaveChance = (unsigned int)ceilf((self.cardPack.flashCards.count * (PERCENT_OF_WEAKEST_CARDS_LIMIT / 100.0f)));
+        
+        if (countOfCardsHaveChance <= 1)
+        {
+            countOfCardsHaveChance = 2;
+        }
+        
+        unsigned int randomIndex = arc4random_uniform(countOfCardsHaveChance);//arc4random() % countOfCardsHaveChance;
         
         nextFlashCard = self.cardPack.flashCards[randomIndex];
         
-        if (maxRoundCounter-- == 0) break;
+        while ([nextFlashCard isEqual:self.currentFlashCardItem])
+        {
+            randomIndex = arc4random_uniform(countOfCardsHaveChance);
+            
+            nextFlashCard = self.cardPack.flashCards[randomIndex];
+        }
     }
     
     return nextFlashCard;
