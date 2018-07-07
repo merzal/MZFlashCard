@@ -9,9 +9,14 @@
 
 @implementation MZFlashCardPackChooserTableViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
-    // Initialization code
+    
+    UIView* backgroundView = [UIView new];
+    backgroundView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.1f];
+    
+    self.selectedBackgroundView = backgroundView;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
