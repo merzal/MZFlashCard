@@ -20,6 +20,7 @@
 		137CAD0120D57D97003575C2 /* MZFlashCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CAD0020D57D97003575C2 /* MZFlashCardItem.m */; };
 		137CAD0420D58361003575C2 /* MZFlashCardPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CAD0320D58361003575C2 /* MZFlashCardPack.m */; };
 		137CAD0820D588C0003575C2 /* NSString+FilePathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 137CAD0720D588C0003575C2 /* NSString+FilePathUtilities.m */; };
+		66A9D638D93EB91238DEE79B /* Pods_MZFlashCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7D310D009FDE14B098296E /* Pods_MZFlashCard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,9 @@
 		137CAD0320D58361003575C2 /* MZFlashCardPack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardPack.m; sourceTree = "<group>"; };
 		137CAD0620D588C0003575C2 /* NSString+FilePathUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FilePathUtilities.h"; sourceTree = "<group>"; };
 		137CAD0720D588C0003575C2 /* NSString+FilePathUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FilePathUtilities.m"; sourceTree = "<group>"; };
+		63E161A303125497DC4FEB3E /* Pods-MZFlashCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFlashCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-MZFlashCard/Pods-MZFlashCard.release.xcconfig"; sourceTree = "<group>"; };
+		64ECE143E44F216988B9FA5B /* Pods-MZFlashCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFlashCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MZFlashCard/Pods-MZFlashCard.debug.xcconfig"; sourceTree = "<group>"; };
+		9C7D310D009FDE14B098296E /* Pods_MZFlashCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZFlashCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A9D638D93EB91238DEE79B /* Pods_MZFlashCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 			children = (
 				057F2A3920D3D531005C593E /* MZFlashCard */,
 				057F2A3820D3D531005C593E /* Products */,
+				FA9171C47361FB47C56FCAA4 /* Pods */,
+				D634A3834DAD2B3E902D9A20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +127,23 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		D634A3834DAD2B3E902D9A20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C7D310D009FDE14B098296E /* Pods_MZFlashCard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA9171C47361FB47C56FCAA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64ECE143E44F216988B9FA5B /* Pods-MZFlashCard.debug.xcconfig */,
+				63E161A303125497DC4FEB3E /* Pods-MZFlashCard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 057F2A4D20D3D534005C593E /* Build configuration list for PBXNativeTarget "MZFlashCard" */;
 			buildPhases = (
+				4915C1CD6F24D5404B92B6D2 /* [CP] Check Pods Manifest.lock */,
 				057F2A3320D3D531005C593E /* Sources */,
 				057F2A3420D3D531005C593E /* Frameworks */,
 				057F2A3520D3D531005C593E /* Resources */,
+				D08E82C3BC8417357915E7F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +210,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4915C1CD6F24D5404B92B6D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MZFlashCard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D08E82C3BC8417357915E7F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MZFlashCard/Pods-MZFlashCard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZFlashCard/Pods-MZFlashCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		057F2A3320D3D531005C593E /* Sources */ = {
@@ -336,15 +403,13 @@
 		};
 		057F2A4E20D3D534005C593E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64ECE143E44F216988B9FA5B /* Pods-MZFlashCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27P2X72M9U;
 				INFOPLIST_FILE = MZFlashCard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = merzal.MZFlashCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -353,15 +418,13 @@
 		};
 		057F2A4F20D3D534005C593E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E161A303125497DC4FEB3E /* Pods-MZFlashCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27P2X72M9U;
 				INFOPLIST_FILE = MZFlashCard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = merzal.MZFlashCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
