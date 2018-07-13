@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055960BD20F8E2100017A4FF /* MZGoogleSpreadsheetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055960BC20F8E2100017A4FF /* MZGoogleSpreadsheetListViewController.m */; };
 		0561820420E6788400275891 /* MZFlashCardPackChooserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0561820220E6788400275891 /* MZFlashCardPackChooserTableViewCell.m */; };
 		0561820520E6788400275891 /* MZFlashCardPackChooserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561820320E6788400275891 /* MZFlashCardPackChooserTableViewCell.xib */; };
 		057F2A3C20D3D531005C593E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 057F2A3B20D3D531005C593E /* AppDelegate.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055960BB20F8E2100017A4FF /* MZGoogleSpreadsheetListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZGoogleSpreadsheetListViewController.h; sourceTree = "<group>"; };
+		055960BC20F8E2100017A4FF /* MZGoogleSpreadsheetListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZGoogleSpreadsheetListViewController.m; sourceTree = "<group>"; };
 		0561820120E6788400275891 /* MZFlashCardPackChooserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFlashCardPackChooserTableViewCell.h; sourceTree = "<group>"; };
 		0561820220E6788400275891 /* MZFlashCardPackChooserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZFlashCardPackChooserTableViewCell.m; sourceTree = "<group>"; };
 		0561820320E6788400275891 /* MZFlashCardPackChooserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MZFlashCardPackChooserTableViewCell.xib; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				0561820320E6788400275891 /* MZFlashCardPackChooserTableViewCell.xib */,
 				0581788E20EE664100605513 /* MZFlashCardViewController.h */,
 				0581788F20EE664100605513 /* MZFlashCardViewController.m */,
+				055960BB20F8E2100017A4FF /* MZGoogleSpreadsheetListViewController.h */,
+				055960BC20F8E2100017A4FF /* MZGoogleSpreadsheetListViewController.m */,
 				057F2A4020D3D531005C593E /* Main.storyboard */,
 				057F2A4320D3D534005C593E /* Assets.xcassets */,
 				057F2A4520D3D534005C593E /* LaunchScreen.storyboard */,
@@ -156,6 +161,7 @@
 				057F2A3420D3D531005C593E /* Frameworks */,
 				057F2A3520D3D531005C593E /* Resources */,
 				D08E82C3BC8417357915E7F0 /* [CP] Embed Pods Frameworks */,
+				009830A433BD0F5A945B1FA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +218,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		009830A433BD0F5A945B1FA9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MZFlashCard/Pods-MZFlashCard-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZFlashCard/Pods-MZFlashCard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4915C1CD6F24D5404B92B6D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,13 +261,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MZFlashCard/Pods-MZFlashCard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -262,6 +290,7 @@
 				057F2A3F20D3D531005C593E /* MZRootViewController.m in Sources */,
 				137CAD0420D58361003575C2 /* MZFlashCardPack.m in Sources */,
 				0581789120EE664100605513 /* MZFlashCardViewController.m in Sources */,
+				055960BD20F8E2100017A4FF /* MZGoogleSpreadsheetListViewController.m in Sources */,
 				0561820420E6788400275891 /* MZFlashCardPackChooserTableViewCell.m in Sources */,
 				137CAD0120D57D97003575C2 /* MZFlashCardItem.m in Sources */,
 				057F2A4A20D3D534005C593E /* main.m in Sources */,
@@ -409,7 +438,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27P2X72M9U;
 				INFOPLIST_FILE = MZFlashCard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = merzal.MZFlashCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,7 +456,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27P2X72M9U;
 				INFOPLIST_FILE = MZFlashCard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = merzal.MZFlashCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

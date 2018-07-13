@@ -118,6 +118,8 @@
 
 - (void)addCardPackButtonPushed:(UIBarButtonItem*)barButtonItem
 {
+    [self performSegueWithIdentifier:@"showGoogleSpreadsheetListVC" sender:nil];
+    
     if (self.cardPacks.count == 0)
     {
         NSArray* flashCards = @[[[MZFlashCardItem alloc] initWithChallenge:@"challenge1" solution:@"solution1"],

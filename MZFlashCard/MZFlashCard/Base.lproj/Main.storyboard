@@ -153,11 +153,49 @@
                         <outlet property="noCardPackAvailableLabel" destination="E4J-0G-80U" id="Acv-ig-OXn"/>
                         <outlet property="tableView" destination="SzM-it-z2q" id="LZt-s5-8W3"/>
                         <segue destination="VNq-Tv-hoY" kind="show" identifier="showFlashCardVC" id="OPK-UM-itx"/>
+                        <segue destination="X5c-Zf-dnM" kind="presentation" identifier="showGoogleSpreadsheetListVC" id="cLi-4E-qYg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLY-8W-Qe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="170" y="-90"/>
+        </scene>
+        <!--Google Spreadsheet List View Controller-->
+        <scene sceneID="goh-G7-LQP">
+            <objects>
+                <viewController id="cIh-Xz-4Yv" customClass="MZGoogleSpreadsheetListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pBc-kg-mb1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunflowers" translatesAutoresizingMaskIntoConstraints="NO" id="z1v-36-SUv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8o1-jC-VC8" customClass="GIDSignInButton">
+                                <rect key="frame" x="67.5" y="283.5" width="240" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fEj-fB-9Ha"/>
+                                    <constraint firstAttribute="width" constant="240" id="z0Q-od-TUS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8o1-jC-VC8" firstAttribute="centerX" secondItem="pBc-kg-mb1" secondAttribute="centerX" id="0H9-uC-gz3"/>
+                            <constraint firstItem="fak-KG-I42" firstAttribute="bottom" secondItem="z1v-36-SUv" secondAttribute="bottom" id="Edu-cg-OQl"/>
+                            <constraint firstItem="8o1-jC-VC8" firstAttribute="centerY" secondItem="pBc-kg-mb1" secondAttribute="centerY" id="Iic-lu-uf2"/>
+                            <constraint firstItem="z1v-36-SUv" firstAttribute="top" secondItem="pBc-kg-mb1" secondAttribute="top" id="L38-kv-3Db"/>
+                            <constraint firstItem="fak-KG-I42" firstAttribute="trailing" secondItem="z1v-36-SUv" secondAttribute="trailing" id="LQ9-Ln-LI4"/>
+                            <constraint firstItem="z1v-36-SUv" firstAttribute="leading" secondItem="fak-KG-I42" secondAttribute="leading" id="woi-Vw-l5f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fak-KG-I42"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j0G-cc-aGa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6u-qr-qLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="-797"/>
         </scene>
         <!--Flash Card View Controller-->
         <scene sceneID="VHL-uu-thy">
@@ -310,6 +348,22 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="-90.404797601199405"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EwT-ol-mHK">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="X5c-Zf-dnM" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GSD-TW-aux">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cIh-Xz-4Yv" kind="relationship" relationship="rootViewController" id="Ypv-sW-N0U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlQ-ob-s6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-797"/>
         </scene>
     </scenes>
     <resources>

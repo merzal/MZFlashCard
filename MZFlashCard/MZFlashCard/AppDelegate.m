@@ -22,8 +22,42 @@
                                                            NSFontAttributeName: [UIFont fontWithName:@"Menlo" size:18.0f]}
                                                 forState:UIControlStateNormal];
     
+    
+    
+    [GIDSignIn sharedInstance].clientID = @"987624862256-kr0qtbtfrhjavm0ld3smnj9oeo14t69p.apps.googleusercontent.com";
+    [GIDSignIn sharedInstance].delegate = self;
+    
     return YES;
 }
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    return [[GIDSignIn sharedInstance] handleURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+}
+
+
+
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    // Perform any operations on signed in user here.
+//    NSString *userId = user.userID;                  // For client-side use only!
+//    NSString *idToken = user.authentication.idToken; // Safe to send to the server
+//    NSString *fullName = user.profile.name;
+//    NSString *givenName = user.profile.givenName;
+//    NSString *familyName = user.profile.familyName;
+//    NSString *email = user.profile.email;
+    // ...
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"abc" object:user.authentication.fetcherAuthorizer];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+- (void)signIn:(GIDSignIn *)signIn didDisconnectWithUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    // Perform any operations when the user disconnects from app here.
+    // ...
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
