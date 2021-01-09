@@ -125,27 +125,28 @@
 
 - (void)addCardPackButtonPushed:(UIBarButtonItem*)barButtonItem
 {
-    if (self.cardPacks.count == 0)
-    {
-        NSArray* flashCards = @[[[MZFlashCardItem alloc] initWithChallenge:@"challenge1" solution:@"solution1"],
-                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge2" solution:@"solution2"],
-                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge3" solution:@"solution3"],
-                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge4" solution:@"solution4"],
-                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge5" solution:@"solution5"],
-                                ];
-        
-        NSArray* cardPacks = @[[[MZFlashCardPack alloc] initWithTitle:@"First card pack" flashCards:flashCards],
-                               [[MZFlashCardPack alloc] initWithTitle:@"Second card pack" flashCards:flashCards],
-                               [[MZFlashCardPack alloc] initWithTitle:@"Third card pack" flashCards:flashCards],
-                               [[MZFlashCardPack alloc] initWithTitle:@"Fourth card pack" flashCards:flashCards],
-                               ];
-        
-        self.cardPacks = [NSMutableArray arrayWithArray:cardPacks];
-        
-        [self saveCardPacksToDisk];
-        
-        [self.tableView reloadData];
-    }
+    [self performSegueWithIdentifier:@"showGoogleVC" sender:nil];
+//    if (self.cardPacks.count == 0)
+//    {
+//        NSArray* flashCards = @[[[MZFlashCardItem alloc] initWithChallenge:@"challenge1" solution:@"solution1"],
+//                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge2" solution:@"solution2"],
+//                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge3" solution:@"solution3"],
+//                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge4" solution:@"solution4"],
+//                                [[MZFlashCardItem alloc] initWithChallenge:@"challenge5" solution:@"solution5"]
+//                                ];
+//
+//        NSArray* cardPacks = @[[[MZFlashCardPack alloc] initWithTitle:@"First card pack" flashCards:flashCards]
+////                               [[MZFlashCardPack alloc] initWithTitle:@"Second card pack" flashCards:flashCards],
+////                               [[MZFlashCardPack alloc] initWithTitle:@"Third card pack" flashCards:flashCards],
+////                               [[MZFlashCardPack alloc] initWithTitle:@"Fourth card pack" flashCards:flashCards],
+//                               ];
+//
+//        self.cardPacks = [NSMutableArray arrayWithArray:cardPacks];
+//
+//        [self saveCardPacksToDisk];
+//
+//        [self.tableView reloadData];
+//    }
 }
 
 #pragma mark - Private helper methods

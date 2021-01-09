@@ -1,0 +1,10 @@
+platform :ios, '11.0'
+
+use_frameworks!
+
+target 'MZFlashCard' do
+
+    pod 'GoogleAPIClientForREST/Sheets', '~> 1.3'
+    pod 'GoogleSignIn', '~> 4.1'
+
+end

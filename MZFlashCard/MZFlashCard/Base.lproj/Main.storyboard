@@ -153,11 +153,34 @@
                         <outlet property="noCardPackAvailableLabel" destination="E4J-0G-80U" id="Acv-ig-OXn"/>
                         <outlet property="tableView" destination="SzM-it-z2q" id="LZt-s5-8W3"/>
                         <segue destination="VNq-Tv-hoY" kind="show" identifier="showFlashCardVC" id="OPK-UM-itx"/>
+                        <segue destination="FUh-Ki-dqH" kind="presentation" identifier="showGoogleVC" id="o9b-0Y-kFY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLY-8W-Qe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="170" y="-90"/>
+        </scene>
+        <!--Google View Controller-->
+        <scene sceneID="lLd-T5-fCq">
+            <objects>
+                <viewController id="FUh-Ki-dqH" customClass="MZGoogleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Fi-RL-NRq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pom-aP-loX" customClass="GIDSignInButton">
+                                <rect key="frame" x="86" y="212" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Rni-3i-54g"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeO-gF-5hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-851"/>
         </scene>
         <!--Flash Card View Controller-->
         <scene sceneID="VHL-uu-thy">
